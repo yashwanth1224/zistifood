@@ -1,0 +1,119 @@
+@import "tailwindcss";
+
+@theme {
+  --color-zisti-red: #e23744;
+  --color-zisti-pink: #fff0f2;
+  --color-brand: #e23744;
+  --color-brand-dark: #cb202d;
+  --color-ink: #000000;
+  --color-paper: #ffffff;
+  --color-blush: #fff0f2;
+  --color-tone-yellow: #f8cb46;
+  --color-tone-purple: #c4b5fd;
+  --color-tone-pink: #ffd6dc;
+  --color-gold: #c8a15a;
+  --color-bronze: #8c6a3c;
+
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-float-slow: float 9s ease-in-out infinite;
+  --animate-float-reverse: float-reverse 7s ease-in-out infinite;
+  --animate-bounce-arrow: bounce-arrow 1.6s ease-in-out infinite;
+  --animate-pulse-bg: pulse-bg 8s ease-in-out infinite;
+  --animate-drift: drift 12s linear infinite;
+  --animate-dash: dash 6s linear infinite;
+  --animate-scan: scan 2.5s ease-in-out infinite;
+
+  @keyframes scan {
+    0%, 100% {
+      top: 4%;
+      opacity: 0.2;
+    }
+    50% {
+      top: 92%;
+      opacity: 0.9;
+    }
+  }
+
+  @keyframes float-reverse {
+    0%,
+    100% {
+      transform: translateY(0) rotate(0deg);
+    }
+    50% {
+      transform: translateY(12px) rotate(-3deg);
+    }
+  }
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-14px) rotate(3deg);
+    }
+  }
+
+  @keyframes bounce-arrow {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(6px);
+    }
+  }
+
+  @keyframes pulse-bg {
+    0%,
+    100% {
+      opacity: 0.55;
+      scale: 1;
+    }
+    50% {
+      opacity: 0.9;
+      scale: 1.08;
+    }
+  }
+
+  @keyframes drift {
+    0% {
+      transform: translate3d(0, 0, 0);
+      opacity: 0;
+    }
+    10%,
+    85% {
+      opacity: 1;
+    }
+    100% {
+      transform: translate3d(var(--drift-x, 20px), -60vh, 0);
+      opacity: 0;
+    }
+  }
+
+  @keyframes dash {
+    to {
+      stroke-dashoffset: -200;
+    }
+  }
+}
+
+@theme inline {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  :focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 3px;
+    border-radius: 0.25rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+  }
+}
