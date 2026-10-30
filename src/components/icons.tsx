@@ -195,49 +195,6 @@ const icons = {
     ),
   },
 
-  /* Eternal Brand Logos */
-  "brand-zisti": {
-    kind: "color",
-    viewBox: "0 0 64 64",
-    body: (
-      <g>
-        <rect width="64" height="64" rx="16" fill="#E23744" />
-        <text x="32" y="42" fontFamily="sans-serif" fontSize="28" fontStyle="italic" fontWeight="900" fill="#FFFFFF" textAnchor="middle" letterSpacing="-1">zisti</text>
-      </g>
-    ),
-  },
-  "brand-blinkit": {
-    kind: "color",
-    viewBox: "0 0 64 64",
-    body: (
-      <g>
-        <rect width="64" height="64" rx="16" fill="#F8CB46" />
-        <text x="32" y="44" fontFamily="sans-serif" fontSize="32" fontWeight="900" fill="#0C831F" textAnchor="middle">b</text>
-      </g>
-    ),
-  },
-  "brand-district": {
-    kind: "color",
-    viewBox: "0 0 64 64",
-    body: (
-      <g>
-        <rect width="64" height="64" rx="16" fill="#5E35B1" />
-        <path d="M22 18H34C41 18 46 23 46 32C46 41 41 46 34 46H22V18ZM28 24V40H33C37 40 40 37 40 32C40 27 37 24 33 24H28Z" fill="#FFFFFF" />
-      </g>
-    ),
-  },
-  "brand-hyperpure": {
-    kind: "color",
-    viewBox: "0 0 64 64",
-    body: (
-      <g>
-        <rect width="64" height="64" rx="16" fill="#FF5252" />
-        <path d="M32 16C26 22 24 30 24 38C28 38 36 36 40 30C40 22 36 18 32 16Z" fill="#76FF03" />
-        <path d="M32 38V48M32 38C36 38 42 34 44 28" stroke="#FFFFFF" strokeWidth="3" strokeLinecap="round" />
-      </g>
-    ),
-  },
-
   /* Feature & Functional Icons */
   restaurant: {
     kind: "line",

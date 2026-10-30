@@ -15,8 +15,8 @@ export function Footer() {
           </Link>
         </div>
 
-        {/* 5-Column Navigation Grid */}
-        <div className="grid grid-cols-2 gap-10 pt-10 sm:grid-cols-3 lg:grid-cols-5">
+        {/* 4-Column Navigation Grid */}
+        <div className="grid grid-cols-1 gap-8 pt-10 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4">
           {/* Column 1: Company */}
           <div>
             <h3 className="text-xs font-bold uppercase tracking-widest text-neutral-300">
@@ -26,11 +26,6 @@ export function Footer() {
               <li>
                 <Link to="/about" className="transition hover:text-white">
                   Who We Are
-                </Link>
-              </li>
-              <li>
-                <Link to="/careers" className="transition hover:text-white">
-                  Careers
                 </Link>
               </li>
               <li>
@@ -49,56 +44,39 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Column 2: For Restaurants & Partners */}
-          <div>
-            <h3 className="text-xs font-bold uppercase tracking-widest text-neutral-300">
-              For Restaurants
-            </h3>
-            <ul className="mt-4 space-y-2.5 text-sm text-neutral-400">
-              <li>
-                <Link to="/partner" className="transition hover:text-white">
-                  Partner With Us
-                </Link>
-              </li>
-              <li>
-                <a href="#waitlist" className="transition hover:text-white">
-                  Apps For You
-                </a>
-              </li>
-              <li>
-                <a
-                  href="mailto:zistifooddelivery@gmail.com?subject=Restaurant%20Inquiry"
-                  className="transition hover:text-white"
-                >
-                  Partner Support
-                </a>
-              </li>
-              <li>
-                <a href="tel:+919449961496" className="transition hover:text-white">
-                  Ride with Zisti
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Column 3: Learn More */}
+          {/* Column 2: Learn More */}
           <div>
             <h3 className="text-xs font-bold uppercase tracking-widest text-neutral-300">
               Learn More
             </h3>
             <ul className="mt-4 space-y-2.5 text-sm text-neutral-400">
               <li>
-                <Link to="/privacy" className="transition hover:text-white">
+                <Link
+                  to="/privacy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition hover:text-white"
+                >
                   Privacy Policy
                 </Link>
               </li>
               <li>
-                <Link to="/security" className="transition hover:text-white">
+                <Link
+                  to="/security"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition hover:text-white"
+                >
                   Security
                 </Link>
               </li>
               <li>
-                <Link to="/terms" className="transition hover:text-white">
+                <Link
+                  to="/terms"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition hover:text-white"
+                >
                   Terms of Service
                 </Link>
               </li>
@@ -118,11 +96,11 @@ export function Footer() {
             <ul className="mt-4 space-y-2.5 text-sm text-neutral-400">
               <li>
                 <a
-                  href="tel:+919449961496"
+                  href="tel:+918884599231"
                   className="inline-flex items-center gap-1.5 transition hover:text-brand"
                 >
                   <span>📞</span>
-                  <span>+91 9449961496</span>
+                  <span>+91 8884599231</span>
                 </a>
               </li>
               <li>
@@ -203,17 +181,32 @@ export function Footer() {
           <p>© 2026 Zisti Ltd. All rights reserved.</p>
           <ul className="flex flex-wrap gap-6">
             <li>
-              <Link to="/privacy" className="transition hover:text-white">
+              <Link
+                to="/privacy"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition hover:text-white"
+              >
                 Privacy Policy
               </Link>
             </li>
             <li>
-              <Link to="/terms" className="transition hover:text-white">
+              <Link
+                to="/terms"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition hover:text-white"
+              >
                 Terms of Service
               </Link>
             </li>
             <li>
-              <Link to="/security" className="transition hover:text-white">
+              <Link
+                to="/security"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition hover:text-white"
+              >
                 Security
               </Link>
             </li>

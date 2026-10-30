@@ -86,7 +86,7 @@ export function ComingSoon() {
               <ArrowRight className="size-4" />
             </a>
             <a
-              href="tel:+919449961496"
+              href="tel:+918884599231"
               className="inline-flex shrink-0 cursor-pointer items-center gap-1.5 rounded-2xl border border-neutral-700 bg-neutral-900 px-4 py-3 text-xs font-semibold text-white transition duration-200 hover:bg-neutral-800 sm:text-sm"
             >
               <span>📞</span>
@@ -98,11 +98,11 @@ export function ComingSoon() {
         {/* Social and Direct Contact Row */}
         <div className="mt-8 flex flex-wrap items-center justify-center gap-6 text-xs text-neutral-600">
           <a
-            href="tel:+919449961496"
+            href="tel:+918884599231"
             className="flex items-center gap-1.5 font-medium transition hover:text-zisti-red"
           >
             <span>📞</span>
-            <span>+91 9449961496</span>
+            <span>+91 8884599231</span>
           </a>
           <span>•</span>
           <a

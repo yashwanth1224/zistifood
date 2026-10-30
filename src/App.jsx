@@ -8,6 +8,9 @@ import { ComingSoon } from "./components/ComingSoon";
 import { DownloadBanner } from "./components/sections/DownloadBanner";
 import { Footer } from "./components/Footer";
 import { Placeholder } from "./components/Placeholder";
+import { PrivacyPolicy } from "./components/pages/PrivacyPolicy";
+import { TermsOfService } from "./components/pages/TermsOfService";
+import { Security } from "./components/pages/Security";
 import { Logo } from "./components/Logo";
 
 function AuthModal({ mode, onClose, onSwitch }) {
@@ -151,15 +154,15 @@ export default function App() {
         />
         <Route
           path="/privacy"
-          element={<Placeholder title="Privacy Policy" />}
+          element={<PrivacyPolicy />}
         />
         <Route
           path="/security"
-          element={<Placeholder title="Security & Safety" />}
+          element={<Security />}
         />
         <Route
           path="/terms"
-          element={<Placeholder title="Terms of Service" />}
+          element={<TermsOfService />}
         />
         <Route
           path="/careers"

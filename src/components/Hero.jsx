@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import { Icon } from "@/components/icons";
 import { Logo } from "@/components/Logo";
 import { hero } from "@/content/site";
@@ -21,40 +20,7 @@ const particles = Array.from({ length: 28 }, (_, i) => {
   };
 });
 
-const SEARCH_SUGGESTIONS = [
-  "biryani",
-  "pizza",
-  "butter chicken",
-  "burger",
-  "dosa",
-  "rolls",
-  "ice cream",
-  "pasta",
-];
-
-const POPULAR_LOCATIONS = [
-  "Bengaluru, Karnataka",
-  "Delhi NCR",
-  "Mumbai, Maharashtra",
-  "Hyderabad, Telangana",
-  "Chennai, Tamil Nadu",
-  "Kolkata, West Bengal",
-  "Pune, Maharashtra",
-];
-
 export function Hero({ onOpenAuth }) {
-  const [suggestionIndex, setSuggestionIndex] = useState(0);
-  const [selectedLocation, setSelectedLocation] = useState("Bengaluru, Karnataka");
-  const [isLocationOpen, setIsLocationOpen] = useState(false);
-  const [searchQuery, setSearchQuery] = useState("");
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setSuggestionIndex((prev) => (prev + 1) % SEARCH_SUGGESTIONS.length);
-    }, 2800);
-    return () => clearInterval(timer);
-  }, []);
-
   return (
     <section className="relative isolate flex min-h-svh flex-col items-center justify-center overflow-hidden bg-[#0a0502] px-4 py-16 text-center text-white">
       {/* Background Gradients & Fallback */}
@@ -99,64 +65,6 @@ export function Hero({ onOpenAuth }) {
         <p className="mt-3 max-w-md text-base text-white/85 drop-shadow md:text-lg">
           {hero.subtitle}
         </p>
-
-        {/* Location & Search Bar */}
-        <div className="mt-8 flex w-full max-w-2xl flex-col rounded-2xl bg-white p-2 text-left shadow-2xl ring-1 ring-black/10 sm:flex-row sm:items-center sm:rounded-full sm:p-1.5">
-          {/* Location Picker */}
-          <div className="relative sm:w-5/12">
-            <button
-              type="button"
-              onClick={() => setIsLocationOpen(!isLocationOpen)}
-              className="flex w-full cursor-pointer items-center justify-between gap-2 rounded-xl px-4 py-2.5 text-sm text-neutral-800 transition hover:bg-neutral-50 sm:rounded-full"
-            >
-              <div className="flex items-center gap-2 overflow-hidden text-neutral-700">
-                <Icon name="map-pin" className="size-4 shrink-0 text-brand" />
-                <span className="truncate font-medium">{selectedLocation}</span>
-              </div>
-              <Icon name="chevron-down" className="size-4 shrink-0 text-neutral-400" />
-            </button>
-
-            {/* Location Dropdown */}
-            {isLocationOpen && (
-              <div className="absolute left-0 top-full z-30 mt-2 w-64 rounded-2xl bg-white p-2 text-sm shadow-xl ring-1 ring-black/10">
-                <p className="px-3 py-1.5 text-xs font-semibold uppercase tracking-wider text-neutral-400">
-                  Launching Soon in
-                </p>
-                <div className="max-h-48 overflow-y-auto">
-                  {POPULAR_LOCATIONS.map((loc) => (
-                    <button
-                      key={loc}
-                      type="button"
-                      onClick={() => {
-                        setSelectedLocation(loc);
-                        setIsLocationOpen(false);
-                      }}
-                      className="flex w-full cursor-pointer items-center gap-2 rounded-lg px-3 py-2 text-left text-neutral-700 transition hover:bg-neutral-100"
-                    >
-                      <Icon name="map-pin" className="size-3.5 text-neutral-400" />
-                      <span className="truncate">{loc}</span>
-                    </button>
-                  ))}
-                </div>
-              </div>
-            )}
-          </div>
-
-          {/* Divider */}
-          <div className="hidden h-6 w-px bg-neutral-300 sm:block" />
-
-          {/* Search Query Input */}
-          <div className="relative flex flex-1 items-center px-4 py-1 text-neutral-700">
-            <Icon name="search" className="size-4 shrink-0 text-neutral-400" />
-            <input
-              type="text"
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder={`Search for "${SEARCH_SUGGESTIONS[suggestionIndex]}"`}
-              className="w-full bg-transparent px-3 py-2 text-sm text-black placeholder:text-neutral-400 focus:outline-none"
-            />
-          </div>
-        </div>
 
         {/* App Store & Google Play Pre-Launch Buttons */}
         <div className="mt-8 flex flex-col items-center">
