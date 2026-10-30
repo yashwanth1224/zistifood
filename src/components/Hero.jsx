@@ -108,14 +108,17 @@ export function Hero({ onOpenAuth }) {
         </div>
       </div>
 
-      {/* Bouncing Scroll Down Anchor */}
-      <a
-        href="#value-prop"
-        className="relative z-10 flex flex-col items-center gap-1.5 pb-2 text-xs font-medium tracking-wide text-white/80 transition hover:text-white"
+      {/* Bouncing Scroll Down Button */}
+      <button
+        type="button"
+        onClick={() => {
+          document.getElementById("value-prop")?.scrollIntoView({ behavior: "smooth" });
+        }}
+        className="relative z-10 flex flex-col items-center gap-1.5 pb-2 text-xs font-medium tracking-wide text-white/80 transition hover:text-white cursor-pointer"
       >
         <span>{hero.scrollLabel}</span>
         <Icon name="chevron-down" className="size-5 animate-bounce-arrow text-white/90" />
-      </a>
+      </button>
     </section>
   );
 }

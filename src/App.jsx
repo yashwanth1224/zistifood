@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { VideoLoader } from "./components/VideoLoader";
 import { Hero } from "./components/Hero";
@@ -128,6 +128,10 @@ function AuthModal({ mode, onClose, onSwitch }) {
 }
 
 function HomePage({ onOpenAuth }) {
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+  }, []);
+
   return (
     <main>
       <Hero onOpenAuth={onOpenAuth} />
