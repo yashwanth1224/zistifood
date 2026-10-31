@@ -130,20 +130,40 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Zisti on Instagram"
-                  className="grid size-9 place-items-center rounded-full bg-neutral-900 text-neutral-300 ring-1 ring-neutral-800 transition hover:bg-brand hover:text-white hover:ring-brand"
+                  className="grid size-9 place-items-center rounded-full overflow-hidden transition hover:scale-110 hover:shadow-lg"
                 >
-                  <Icon name="instagram" className="size-4" />
+                  <Icon name="instagram" className="size-9" />
                 </a>
               </li>
               <li>
                 <a
-                  href="https://www.facebook.com/profile.php?id=6159572502722"
+                  href="https://www.facebook.com/61595725027222/"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Zisti on Facebook"
-                  className="grid size-9 place-items-center rounded-full bg-neutral-900 text-neutral-300 ring-1 ring-neutral-800 transition hover:bg-brand hover:text-white hover:ring-brand"
+                  className="grid size-9 place-items-center rounded-full overflow-hidden transition hover:scale-110 hover:shadow-lg"
                 >
-                  <Icon name="facebook" className="size-4" />
+                  <Icon name="facebook" className="size-9" />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://wa.me/918884599231"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Zisti on WhatsApp"
+                  className="grid size-9 place-items-center rounded-full overflow-hidden transition hover:scale-110 hover:shadow-lg"
+                >
+                  <Icon name="whatsapp" className="size-9" />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="mailto:zistifooddelivery@gmail.com"
+                  aria-label="Email Zisti"
+                  className="grid size-9 place-items-center rounded-full overflow-hidden transition hover:scale-110 hover:shadow-lg"
+                >
+                  <Icon name="email" className="size-9" />
                 </a>
               </li>
               <li>
@@ -152,9 +172,9 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Zisti on YouTube"
-                  className="grid size-9 place-items-center rounded-full bg-neutral-900 text-neutral-300 ring-1 ring-neutral-800 transition hover:bg-brand hover:text-white hover:ring-brand"
+                  className="grid size-9 place-items-center rounded-full overflow-hidden transition hover:scale-110 hover:shadow-lg"
                 >
-                  <Icon name="youtube" className="size-4" />
+                  <Icon name="youtube" className="size-9" />
                 </a>
               </li>
               <li>
@@ -163,7 +183,7 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Zisti on X"
-                  className="grid size-9 place-items-center rounded-full bg-neutral-900 text-neutral-300 ring-1 ring-neutral-800 transition hover:bg-brand hover:text-white hover:ring-brand"
+                  className="grid size-9 place-items-center rounded-full bg-black text-white ring-1 ring-neutral-700 transition hover:scale-110 hover:shadow-lg"
                 >
                   <Icon name="x" className="size-4" />
                 </a>

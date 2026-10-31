@@ -96,7 +96,7 @@ export const footer = {
   socialHeading: "Social Links",
   socials: [
     { label: "Zisti on Instagram", href: "https://www.instagram.com/zisti.fooddelivery/", icon: "instagram" },
-    { label: "Zisti on Facebook", href: "https://www.facebook.com/profile.php?id=6159572502722", icon: "facebook" },
+    { label: "Zisti on Facebook", href: "https://www.facebook.com/61595725027222/", icon: "facebook" },
     { label: "Zisti on YouTube", href: "#", icon: "youtube" },
     { label: "Zisti on X", href: "#", icon: "x" },
   ] satisfies Social[],

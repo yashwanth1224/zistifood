@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Mail, ArrowRight } from "lucide-react";
+import { Icon } from "@/components/icons";
 
 export function ComingSoon() {
   const [email, setEmail] = useState("");
@@ -96,39 +97,51 @@ export function ComingSoon() {
         </div>
 
         {/* Social and Direct Contact Row */}
-        <div className="mt-8 flex flex-wrap items-center justify-center gap-6 text-xs text-neutral-600">
+        <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
           <a
             href="tel:+918884599231"
-            className="flex items-center gap-1.5 font-medium transition hover:text-zisti-red"
+            className="flex items-center gap-1.5 text-xs font-medium text-neutral-600 transition hover:text-zisti-red"
           >
             <span>📞</span>
             <span>+91 8884599231</span>
           </a>
-          <span>•</span>
+          <span className="text-neutral-300">•</span>
           <a
             href="mailto:zistifooddelivery@gmail.com"
-            className="flex items-center gap-1.5 font-medium transition hover:text-zisti-red"
+            className="flex items-center gap-1.5 text-xs font-medium text-neutral-600 transition hover:text-zisti-red"
           >
-            <span>📧</span>
+            <Icon name="email" className="size-5 rounded" />
             <span>zistifooddelivery@gmail.com</span>
           </a>
-          <span>•</span>
+          <span className="text-neutral-300">•</span>
           <a
             href="https://www.instagram.com/zisti.fooddelivery/"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1.5 font-semibold text-neutral-700 transition hover:text-pink-600"
+            className="flex items-center gap-1.5 text-xs font-semibold text-neutral-700 transition hover:text-pink-600"
           >
-            <span>📸 Instagram</span>
+            <Icon name="instagram" className="size-5 rounded" />
+            <span>Instagram</span>
           </a>
-          <span>•</span>
+          <span className="text-neutral-300">•</span>
           <a
-            href="https://www.facebook.com/profile.php?id=6159572502722"
+            href="https://www.facebook.com/61595725027222/"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1.5 font-semibold text-neutral-700 transition hover:text-blue-600"
+            className="flex items-center gap-1.5 text-xs font-semibold text-neutral-700 transition hover:text-blue-600"
           >
-            <span>👍 Facebook</span>
+            <Icon name="facebook" className="size-5 rounded" />
+            <span>Facebook</span>
+          </a>
+          <span className="text-neutral-300">•</span>
+          <a
+            href="https://wa.me/918884599231"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-1.5 text-xs font-semibold text-neutral-700 transition hover:text-green-600"
+          >
+            <Icon name="whatsapp" className="size-5 rounded" />
+            <span>WhatsApp</span>
           </a>
         </div>
       </div>

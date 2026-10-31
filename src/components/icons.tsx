@@ -321,13 +321,23 @@ const icons = {
     ),
   },
   instagram: {
-    kind: "line",
+    kind: "color",
     viewBox: "0 0 24 24",
     body: (
       <>
-        <rect x="3" y="3" width="18" height="18" rx="5" />
-        <circle cx="12" cy="12" r="4" />
-        <circle cx="17.5" cy="6.5" r="1" fill="currentColor" />
+        <defs>
+          <radialGradient id="ig-grad" cx="30%" cy="107%" r="150%">
+            <stop offset="0%" stopColor="#fdf497" />
+            <stop offset="5%" stopColor="#fdf497" />
+            <stop offset="45%" stopColor="#fd5949" />
+            <stop offset="60%" stopColor="#d6249f" />
+            <stop offset="90%" stopColor="#285AEB" />
+          </radialGradient>
+        </defs>
+        <rect x="2" y="2" width="20" height="20" rx="5.5" fill="url(#ig-grad)" />
+        <rect x="2" y="2" width="20" height="20" rx="5.5" fill="none" stroke="none" />
+        <circle cx="12" cy="12" r="4.5" fill="none" stroke="white" strokeWidth="1.8" />
+        <circle cx="17.4" cy="6.6" r="1.1" fill="white" />
       </>
     ),
   },
@@ -339,17 +349,65 @@ const icons = {
     ),
   },
   youtube: {
-    kind: "solid",
+    kind: "color",
     viewBox: "0 0 24 24",
     body: (
-      <path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.8 15.1V8.9l5.4 3.1z" />
+      <>
+        <rect width="24" height="24" rx="5" fill="#FF0000" />
+        <path d="M9.8 15.1V8.9l5.4 3.1z" fill="white" fillRule="nonzero" />
+        <path
+          d="M21 7.2a3 3 0 0 0-2.1-2.1C17 4.6 12 4.6 12 4.6s-5 0-6.9.5A3 3 0 0 0 3 7.2 31 31 0 0 0 2.5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 6.9.5 6.9.5s5 0 6.9-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 21.5 12 31 31 0 0 0 21 7.2z"
+          fill="white"
+          fillRule="nonzero"
+          opacity="0"
+        />
+        <path
+          d="M20.5 7.2a2.5 2.5 0 0 0-1.8-1.8C17 5 12 5 12 5s-5 0-6.7.4A2.5 2.5 0 0 0 3.5 7.2 27 27 0 0 0 3 12a27 27 0 0 0 .5 4.8 2.5 2.5 0 0 0 1.8 1.8C7 19 12 19 12 19s5 0 6.7-.4a2.5 2.5 0 0 0 1.8-1.8A27 27 0 0 0 21 12a27 27 0 0 0-.5-4.8z"
+          fill="none"
+        />
+      </>
+    ),
+  },
+  whatsapp: {
+    kind: "color",
+    viewBox: "0 0 24 24",
+    body: (
+      <>
+        <rect width="24" height="24" rx="5" fill="#25D366" />
+        <path
+          d="M12 4a8 8 0 0 0-6.94 11.97L4 20l4.16-1.05A8 8 0 1 0 12 4zm0 14.4A6.4 6.4 0 0 1 8.63 17l-.24-.14-2.47.63.66-2.39-.16-.25A6.4 6.4 0 1 1 12 18.4zm3.52-4.78c-.19-.1-1.14-.56-1.32-.63-.18-.06-.31-.1-.44.1-.13.18-.5.63-.62.76-.11.13-.22.14-.41.05a5.23 5.23 0 0 1-1.54-.95 5.8 5.8 0 0 1-1.07-1.33c-.11-.19-.01-.3.09-.39.09-.09.19-.23.29-.35.1-.12.13-.19.19-.32.06-.12.03-.24-.02-.33-.05-.1-.44-1.06-.6-1.45-.16-.38-.32-.33-.44-.34h-.38c-.13 0-.34.05-.52.24-.18.19-.68.67-.68 1.62 0 .95.7 1.87.8 2s1.36 2.08 3.3 2.92c.46.2.82.32 1.1.41.46.15.88.13 1.21.08.37-.06 1.14-.46 1.3-.91.16-.45.16-.83.11-.91-.05-.09-.18-.14-.38-.24z"
+          fill="white"
+          fillRule="nonzero"
+        />
+      </>
+    ),
+  },
+  email: {
+    kind: "color",
+    viewBox: "0 0 24 24",
+    body: (
+      <>
+        <rect width="24" height="24" rx="5" fill="#EA4335" />
+        <path
+          d="M19 7H5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1zm-1.5 2L12 13 6.5 9h11z"
+          fill="white"
+          fillRule="nonzero"
+        />
+      </>
     ),
   },
   facebook: {
-    kind: "solid",
+    kind: "color",
     viewBox: "0 0 24 24",
     body: (
-      <path d="M14 8.5V6.8c0-.8.2-1.3 1.4-1.3H17V2.2c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.1H7.5V12h2.8v10h3.7V12h2.8l.4-3.5z" />
+      <>
+        <rect width="24" height="24" rx="5" fill="#1877F2" />
+        <path
+          d="M15.12 12.93h-2.07V20H9.87v-7.07H8.4v-2.8h1.47V8.37C9.87 6.64 10.75 5 13.2 5l2.2.01v2.71h-1.6c-.26 0-.63.13-.63.69v1.72h2.25l-.3 2.8z"
+          fill="white"
+          fillRule="nonzero"
+        />
+      </>
     ),
   },
 } satisfies Record<string, IconDef>;
